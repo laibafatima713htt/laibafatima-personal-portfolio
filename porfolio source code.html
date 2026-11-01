@@ -1,0 +1,1042 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Laiba Fatima's personal portfolio website">
+<title>Laiba Fatima | Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #eeede3;
+  --card: #faf7ef;
+  --green: #294638;
+  --gold: #c6a36b;
+  --border: #d9d7c9;
+  --text: #263b30;
+  --muted: #68756b;
+  --white: #fffdf7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+section {
+  padding: 85px 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 18px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading p,
+.muted {
+  color: var(--muted);
+}
+
+.eyebrow {
+  color: #987744;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(238, 237, 227, 0.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.navbar {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.brand-mark {
+  width: 43px;
+  height: 43px;
+  background: var(--green);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  color: #987744;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 23px;
+  background: var(--green);
+  color: white;
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #3c5c49;
+  transform: translateY(-2px);
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--green);
+}
+
+.button-outline:hover {
+  color: white;
+}
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 90px 0;
+  background:
+    radial-gradient(circle at 85% 30%, #d9dfd0 0, transparent 28%),
+    var(--bg);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero h1 {
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  letter-spacing: -2px;
+  margin-bottom: 22px;
+}
+
+.hero h1 span {
+  color: #8c9b81;
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.hero-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.hero-art {
+  position: relative;
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+}
+
+.art-circle {
+  width: min(340px, 80vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #dce2d4;
+  border: 1px solid #c9d1c1;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.art-initials {
+  width: 72%;
+  height: 72%;
+  border: 1px solid #b3bfac;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--green);
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(5rem, 10vw, 8rem);
+  background: rgba(250,247,239,0.45);
+}
+
+.art-label {
+  position: absolute;
+  right: -15px;
+  bottom: 35px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 14px 20px;
+  border-radius: 5px;
+  box-shadow: 0 12px 30px #263b3010;
+  font-size: 13px;
+}
+
+.art-label strong {
+  display: block;
+  color: var(--green);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-card {
+  background: var(--green);
+  color: var(--white);
+  padding: 35px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 7px;
+}
+
+.about-card .large {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #d8c49d;
+}
+
+.about-card p {
+  color: #e0e8de;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.info-line {
+  border-top: 1px solid var(--border);
+  padding: 13px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.info-line span:first-child {
+  color: var(--muted);
+}
+
+.education-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 35px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+}
+
+.education-card h3 {
+  font-size: 25px;
+  margin: 12px 0;
+}
+
+.education-card p {
+  color: var(--muted);
+}
+
+.education-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #e5e8dc;
+  border-radius: 20px;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 7px;
+  transition: 0.25s;
+}
+
+.skill-card:hover,
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px #263b3010;
+}
+
+.skill-number {
+  color: #a78957;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.skill-card h3 {
+  margin: 13px 0 18px;
+  font-size: 22px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.tag {
+  padding: 7px 11px;
+  background: #e9e9de;
+  color: #3d5546;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  transition: 0.25s;
+}
+
+.project-visual {
+  background: #e1e5d9;
+  padding: 28px;
+  display: grid;
+  place-items: center;
+  min-height: 350px;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 420px;
+  background: #faf9f4;
+  border: 1px solid #cdd3c7;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px #20362920;
+  font-size: 11px;
+}
+
+.dashboard-top {
+  background: var(--green);
+  color: white;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.dashboard-content {
+  padding: 18px;
+}
+
+.dashboard-content h3 {
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 17px 0;
+}
+
+.stat {
+  background: #e9eee4;
+  border-radius: 5px;
+  padding: 11px 7px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 17px;
+  color: var(--green);
+}
+
+.dashboard-task {
+  background: white;
+  border: 1px solid #e0e3d9;
+  border-radius: 4px;
+  padding: 9px;
+  margin-top: 7px;
+}
+
+.project-details {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-details h3 {
+  font-size: 32px;
+  margin: 13px 0;
+}
+
+.project-details p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.project-details .tags {
+  margin-bottom: 25px;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume-box {
+  text-align: center;
+  background: var(--green);
+  color: white;
+  border-radius: 8px;
+  padding: 55px 25px;
+}
+
+.resume-box h2 {
+  color: var(--white);
+}
+
+.resume-box p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  color: #dce5db;
+}
+
+.resume-box .button {
+  background: var(--gold);
+  color: #263b30;
+  border-color: var(--gold);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 35px;
+}
+
+.contact-info,
+.contact-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 30px;
+}
+
+.contact-info p {
+  color: var(--muted);
+  margin: 15px 0 25px;
+}
+
+.contact-item {
+  padding: 15px 0;
+  border-top: 1px solid var(--border);
+  overflow-wrap: anywhere;
+}
+
+.contact-item small {
+  display: block;
+  color: var(--muted);
+}
+
+.contact-item a {
+  font-weight: 600;
+}
+
+.contact-form label {
+  display: block;
+  margin: 13px 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 13px;
+  background: #fffdf8;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font: inherit;
+  color: var(--text);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  margin-bottom: 18px;
+}
+
+footer {
+  padding: 25px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer span {
+  color: #987744;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+  }
+
+  .hero-grid {
+    gap: 25px;
+  }
+
+  .project-details {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .navbar {
+    padding: 12px 0;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 13px;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .project-card,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    min-height: 310px;
+  }
+
+  .hero-grid {
+    gap: 35px;
+  }
+
+  .about-grid {
+    gap: 25px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-visual {
+    min-height: 290px;
+    padding: 18px;
+  }
+
+  .project-details {
+    padding: 27px;
+  }
+
+  .info-line {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .art-label {
+    right: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">LF</span>
+      <span>
+        Laiba Fatima
+        <small>PORTFOLIO</small>
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#resume">RESUME</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Welcome to my portfolio</p>
+      <h1>Laiba<br><span>Fatima.</span></h1>
+      <p class="hero-description">
+        A university student passionate about technology,
+        software development, creative problem-solving, and
+        building useful digital experiences.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="button" href="#projects">Explore My Work ↗</a>
+        <a class="button button-outline" href="#contact">Get In Touch</a>
+      </div>
+
+      <p class="hero-note">Programming · Web Development · AI-Assisted Development</p>
+    </div>
+
+    <div class="hero-art">
+      <div class="art-circle">
+        <div class="art-initials">LF</div>
+        <div class="art-label">
+          <strong>Learning & Creating</strong>
+          <span>One project at a time.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-card">
+      <div>
+        <p class="eyebrow">A little about me</p>
+        <div class="large">Curious<br>by nature.</div>
+      </div>
+      <p>Building skills today to create better solutions tomorrow.</p>
+    </div>
+
+    <div class="about-text">
+      <p class="eyebrow">About Me</p>
+      <h2>Turning ideas into digital experiences.</h2>
+
+      <p>
+        I am Laiba Fatima, a university student at Indus University
+        with an interest in programming, web development, databases,
+        and artificial intelligence.
+      </p>
+
+      <p>
+        I enjoy learning new technologies and applying my knowledge
+        through practical projects. My goal is to keep improving my
+        technical skills and create simple, helpful, and user-friendly
+        applications.
+      </p>
+
+      <div class="info-line">
+        <span>University</span>
+        <strong>Indus University</strong>
+      </div>
+
+      <div class="info-line">
+        <span>Interests</span>
+        <strong>Software & Web Development</strong>
+      </div>
+
+      <div class="info-line">
+        <span>Focus</span>
+        <strong>Learning through projects</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">My academic journey</p>
+      <h2>Education</h2>
+      <p>Building a strong foundation in technology and computing.</p>
+    </div>
+
+    <div class="education-card">
+      <span class="education-badge">University Education</span>
+      <h3>Indus University</h3>
+      <p>Undergraduate University Student</p>
+      <p>
+        Developing knowledge of programming, databases, software
+        concepts, and modern technology through coursework and projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">What I am learning</p>
+      <h2>Technical Skills</h2>
+      <p>Technologies and skills I am developing through practice.</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <article class="skill-card">
+        <span class="skill-number">01 / PROGRAMMING</span>
+        <h3>Programming</h3>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">Java</span>
+          <span class="tag">Python</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <span class="skill-number">02 / DATABASES</span>
+        <h3>Database Management</h3>
+        <div class="tags">
+          <span class="tag">SQL</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Relational Database Concepts</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <span class="skill-number">03 / WEB</span>
+        <h3>Web Development</h3>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Responsive Web Design</span>
+          <span class="tag">Frontend Development</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <span class="skill-number">04 / ARTIFICIAL INTELLIGENCE</span>
+        <h3>AI & AI-Assisted Development</h3>
+        <div class="tags">
+          <span class="tag">AI-Assisted Application Development</span>
+          <span class="tag">AI Study Assistant Integration</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">AI Website Builders</span>
+          <span class="tag">AI-Powered Web Applications</span>
+        </div>
+      </article>
+
+      <article class="skill-card">
+        <span class="skill-number">05 / DESIGN</span>
+        <h3>UI Design & Prototyping</h3>
+        <div class="tags">
+          <span class="tag">Figma</span>
+          <span class="tag">UI Prototyping</span>
+          <span class="tag">Webpage Design</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Selected work</p>
+      <h2>Featured Project</h2>
+      <p>A practical project combining study planning and technology.</p>
+    </div>
+
+    <article class="project-card">
+      <div class="project-visual">
+        <div class="dashboard">
+          <div class="dashboard-top">
+            <span>✦ StudyOrbit</span>
+            <span>Dashboard</span>
+          </div>
+
+          <div class="dashboard-content">
+            <p class="muted">YOUR PERSONAL STUDY SPACE</p>
+            <h3>Welcome back!</h3>
+            <p class="muted">Make today a productive day.</p>
+
+            <div class="dashboard-stats">
+              <div class="stat">
+                <strong>85%</strong>
+                <span>Progress</span>
+              </div>
+              <div class="stat">
+                <strong>04</strong>
+                <span>Tasks</span>
+              </div>
+              <div class="stat">
+                <strong>12</strong>
+                <span>Study hrs</span>
+              </div>
+            </div>
+
+            <strong>Today's Study Plan</strong>
+            <div class="dashboard-task">✓ Review programming notes</div>
+            <div class="dashboard-task">○ Complete assignments</div>
+            <div class="dashboard-task">○ Revise lecture topics</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-details">
+        <p class="eyebrow">Featured project / 01</p>
+        <h3>Smart Study</h3>
+
+        <p>
+          Smart Study is a student-focused web application designed
+          to help learners organize their academic tasks, plan study
+          sessions, and manage their learning in one convenient place.
+        </p>
+
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Study Planning</span>
+        </div>
+
+        <div class="project-actions">
+          <a class="button" href="https://studyorbitx.netlify.app"
+             target="_blank" rel="noopener noreferrer">
+            View Live Project ↗
+          </a>
+          <a class="button button-outline" href="#contact">
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="container">
+    <div class="resume-box">
+      <p class="eyebrow">Let's connect</p>
+      <h2>Interested in my journey?</h2>
+      <p>
+        I am continuously learning, building projects, and improving
+        my technical skills. Get in touch to connect with me.
+      </p>
+      <a class="button" href="#contact">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Have a question?</p>
+      <h2>Get In Touch</h2>
+      <p>Feel free to connect with me through email or social platforms.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Let's connect.</h3>
+        <p>
+          I welcome opportunities to learn, collaborate, and connect
+          with people interested in technology.
+        </p>
+
+        <div class="contact-item">
+          <small>Email</small>
+          <a href="mailto:laibafatima7134@gmail.com">
+            laibafatima7134@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <small>GitHub</small>
+          <a href="https://github.com/laibafatima713htt"
+             target="_blank" rel="noopener noreferrer">
+            github.com/laibafatima713htt ↗
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <small>LinkedIn</small>
+          <a href="https://www.linkedin.com/in/laiba-fatima-b41432447/"
+             target="_blank" rel="noopener noreferrer">
+            Visit my LinkedIn profile ↗
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <h3>Send a message</h3>
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message"
+                  placeholder="Write your message..." required></textarea>
+
+        <button type="submit" class="button">Send Message ↗</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>Designed with care by <span>Laiba Fatima</span> ·
+      <span id="year"></span></p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+document.getElementById("contactForm").addEventListener("submit",
+  function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const subject = encodeURIComponent(
+      "Portfolio message from " + name
+    );
+
+    const body = encodeURIComponent(
+      "Name: " + name +
+      "\nEmail: " + email +
+      "\n\nMessage:\n" + message
+    );
+
+    window.location.href =
+      "mailto:laibafatima7134@gmail.com?subject=" +
+      subject + "&body=" + body;
+  }
+);
+</script>
+
+</body>
+</html>
